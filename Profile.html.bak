@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>profile.html</title>
+
+  <script language="javascript">
+   function Profile(){
+   if(document.form1.phone.value ==""){
+	   alert("กรุณาป้อนเบอร์โทรศัพท์ของท่าน");
+	   document.form1.phone.focus();
+	   return false;
+   }
+   if(document.form1.email.value == ""){
+	   alert("กรุณาป้อนอีเมล์ของท่าน");
+	   document.form1.email.focus();
+	   return false;
+   }
+   if(document.form1.birthdate.value == ""){
+	   alert("กรุณาป้อนวันเกิดของท่าน");
+	   document.form1.birthdate.focus();
+       return false;	   
+   }
+   if(document.form1.year.value == ""){
+	   alert("กรุณาป้อนปีเกิดของท่าน");
+	   document.form1.year.focus();
+	   return false;
+   }
+   if(document.form1.gender.value == ""){
+	   alert("กรุณาป้อนเพศของท่าน");
+       document.form1.gender.focus();
+	   return false;
+   }
+   if(document.form1.interest.value == ""){
+	   alert("กรุณาป้อนเพศตรงข้ามที่ท่านสนใจ");
+	   document.form1.interest.focus();
+	   return false;
+   }
+   if(document.form1.language.value == ""){
+	   alert("กรุณาป้อนภาษาของท่าน");
+	   document.form1.language.focus();
+	   return false;
+   }
+   if(document.form1.religion.value == ""){
+       alert("กรุณาป้อนศาสนาของท่าน");
+	   document.form1.religion.focus();
+	   return false;
+   }
+   document.form1.submit();
+   }
+
+  </script>
+  <style>
+  .b1{Font-Size:20px;
+      Font-Style:Bold;
+	  Font-Family:'Designil Font', 'Helvetica', sans-serif;
+	  text-indent:20px;
+	  background-color:	#FFDEAD}
+
+  .h1{Font-Size:30px}
+  .h1{color:#8B6914}
+  .h3{word-spacing: 80px}
+  .h4{Font-Size:30px;}
+  .h5{word-spacing: 66px}
+  .h6{word-spacing: 75px}
+  .h7{word-spacing: 87px}
+  .h8{word-spacing: 35px}
+  .h9{word-spacing: 43px}
+  .h10{word-spacing: 20px}
+
+}
+  </style>
+ </head>
+ <body class="b1">
+  <form action="" method="post" name="form1" onSubmit="JavaScript:return Profile();"">
+
+  <p class="h1">ข้อมูลติดต่อ</p>
+  <p class="h2">โทรศัพท์มือถือ  <input type="text" name="phoe" id="phone"></p>
+  <p class="h3">อีเมล  <input type="text" name="email" id="email"></p>
+  <p class="h4">ข้อมูลพื้นฐาน </p>
+  <p Class="h5">วันเกิด  <input type="date" name="birthdate" id="birthdate"></p>
+  <p Class="h6">ปีเกิด  <input type="text" name="year" id="year"></p>
+  <p Class="h7">เพศ  <input type="text" name="gender" id="gender"></p>
+  <p Class="h8">ความสนใจ  <input type="text" name="interest" id="interest"></p>
+  <p Class="h9">ภาษาไทย <input type="text" name="language" id="language"></p>
+  <p Class="h10">ศาสนานับถือ  <input type="text" name="religion" id="religion"></p>
+
+  <p><input type="submit" name="button" value="ตกลง"> <input type="reset" value="ยกเลิก" size=30/></p>
+  
+ </body>
+</html>

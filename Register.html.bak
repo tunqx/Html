@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+ <head>
+
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+
+  <title>Register Page with HTML5</title>
+  
+  <script language="javascript">
+  function checkpassword(){
+  var pass1=document.getElementById("password").value;
+      pass2=document.getElementById("repassword").value;
+  if(pass1!=pass2){
+	  alert("รหัสผ่านไม่ตรงกันกรุณาป้อนใหม่");
+	  document.getElemenById("password").value;
+	  document.getElementById("repassword").value;
+	  document.getElemenById("password").focus()
+      }
+  }
+    function check(pass){
+    var emailFilter=/^.+@.+\..{2,3}$/;
+	var pass=document.form1.email.value;
+
+    if(document.form1.firstname.value == ""){
+        alert('กรุณาป้อนชื่อของท่าน');
+		document.form1.firstname.focus();
+        return false;
+	}
+	if(document.form1.lastname.value == ""){
+       alert('กรุณาป้อนนามสกุลของท่าน');
+       document.form1.lastname.focus();       
+       return false;
+    }  
+	if(document.form1.email.value == ""){
+       alert('กรุณาป้อนอีเมลของท่าน');
+       document.form1.email.focus();       
+       return false;
+    }  
+	  if(document.form1.password.value == ""){
+        alert('กรุณาป้อนรหัสของท่าน');
+		document.form1.password.focus();
+        return false;
+	}
+	  if (!(emailFilter.test(pass))) {
+      alert ("ท่านใส่อีเมล์ไม่ถูกต้อง");
+      return false;
+    }
+	  return true;
+	  document.form1.submit();
+  }
+  </script>
+  
+  <style>
+  .b1{background-color:	#FFDEAD}
+  .h1{font-size:20px;
+      Font-Style:Bold}
+  </style>
+ </head>
+ 
+ <body class="b1">
+  <form action="Register Login.html" method="post" name="form1" onSubmit="JavaScript:return check();"">
+  <center>
+  <table width=70% border=3>
+  <p class="h1">สมัครสมาชิกใหม่</p>
+
+  <tr>
+  <td>
+  <input type="text" name="firstname" id="firstname"
+  value="" size=25 placeholder="ชื่อ"/>
+  <input type="text" name="lastname" id="lastname"
+  value="" size=25 placeholder="นามสกุล"/>
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <input type="text" name="email" id="email"
+  value="" placeholder="อีเมล์" size=50/>
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <input type="password" name="password" id="password"
+  value="" size=25 placeholder="รหัสผ่าน" maxlength=20 min=8/>
+  <input type="password" name="repassword" id="repassword" 
+  value="" size=25 placeholder="ยืนยันรหัสผ่าน" maxlength=20 min=8 onblur="checkpassword()"/>
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  วันเกิด : <input type="date" name="birthdate" id="birthdate"/>
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <input type="radio" name="gender" id="gender"
+  value = "male"checked/>ชาย
+  <input type="radio" name="gender" id="gender"
+  value ="female"/>หญิง
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <input type="submit" name="btnSubmit1" value="สมัครสมาชิกใหม่">
+  <input type="reset" value="ยกเลิก" size=30/>
+  </td>
+  </tr>
+
+  </table>
+  </form>
+ </body>
+</html>

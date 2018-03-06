@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Register Login</title>
+
+  <script language="javascript">
+
+  function checknull(checkpass){
+	  var emailFilter=/^.+@.+\..{2,3}$/;
+      var checkpass=document.form1.username.value;
+
+	  if(document.form1.username.value == ""){
+        alert('กรุณาป้อนอีเมลของท่าน');
+		 document.form1.username.focus();       
+        return false;
+	  }
+	  if(document.form1.password.value == ""){
+		  alert('กรุณาป้อนรหัสผ่าน');
+		  document.form1.password.focus();
+		  return false;
+	  }
+	  if(document.form1.password.value.length < 8){
+		alert('กรุณาป้อนรหัสเท่ากับหรือมากกว่า 8 ตัวอักษร');
+		document.form1.password.focus();
+		return false;
+	  }
+	  if(document.form1.password.value.length > 20){
+		  alert('กรุณาป้อนรหัสไม่เกิน 20 ตัวอักษร');
+		 document.form1.password.focus();
+		 return false;
+	  }
+      if (!(emailFilter.test(checkpass))) {
+      alert ("ท่านใส่อีเมล์ไม่ถูกต้อง");
+      return false;
+      }
+	  return true;
+
+	  document.form1.submit();
+  }
+      
+  </script>
+  <style>
+  .b1{font-size:20px}
+  .h1{font-size:30px}
+  .h2{word-spacing:35px}
+  .h3{word-spacing:13px}
+  </style>
+ </head>
+
+ <body class="b1">
+ <center>
+   <form  action="Profile.html" name="form1" method="post" onSubmit="JavaScript:return checknull();">
+
+  <p class="h1">กรุณาLoginเพื่อเข้าสู่ระบบ</p>
+
+  <p class="h2">อีเมล: <input type="text" name="username" id="username"
+  value="" placeholder="อีเมล์" size=50/></p>
+
+  <p class="h3">รหัสผ่าน: <input type="password" name="password" id="password"
+  value="" placeholder="รหัสผ่าน" size=50)/></p>
+
+  <input type="submit" name="button" value="เข้าสู่ระบบ">
+  <input type="reset" name="button" value="ยกเลิก">
+ </center>
+ </form>
+ </body>
+</html>
